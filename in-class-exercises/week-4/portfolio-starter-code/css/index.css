@@ -1,0 +1,67 @@
+/* Add your CSS here to style the photography portfolio*/
+
+/* Go here to get fonts: https://fonts.google.com/*/
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Kablammo&display=swap');
+/* Select a font, and copy it's @import statement. Paste at the top of this file.*/
+
+/* Flexbox cheat sheet: https://flexbox.malven.co/*/
+
+/*Normalizing/resetting CSS*/
+
+/* an asterisk * selects EVERYTHING in a page, able to set absolute defaults with it*/
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: "Kablammo";
+    text-align: center;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: "Henny_Penny";
+    text-align: center;
+}
+
+nav {
+    background-color: seagreen;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 6px;
+    border-bottom: 4px solid slateblue;
+}
+
+nav a {
+    color: yellow;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+nav a:hover {
+    color: seagreen;
+}
+
+#img-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 1400px;
+    flex-wrap: wrap;
+    margin-left: 30%;
+    margin-right: 30%;
+    gap: 10px;
+}
+
+img {
+    max-width: 200px;
+}
+
+/*for flexboxes, wrapping is a feature that tells it to wrap around when it runs out of space*/
+
+/* Mosaic galleries are the organizing of different images/sizes/aspect rations but into one fluid shape*/
+
+/* Text-decoration removes underlines and whatnot from hyperlinks*/
+

@@ -1,0 +1,335 @@
+
+/*Buncha shenanigans here. Shananegins? shenagnigenons. wha-ba-la-ab*/
+
+/* @font-face {
+    font-family: 'Cinzel';
+    src: url(c)
+    font-weight: 400;
+    font-style: normal;
+} */
+ /*cant figure this out, do later*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Felipa&family=Jim+Nightshade&family=Protest+Revolution&family=Special+Elite&display=swap');
+
+body {
+    background-color: #345995;
+    font-family: 'Cinzel';
+    padding: 20px;
+    width: 1200px;
+    min-width: 1200px;
+}
+
+/* figure out spacing on the 2 halves of the page*/
+
+/* Good size, but won't transfer devices well rn*/
+img {
+    width: 100px;
+    height: 100px;
+}
+
+header {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+nav {
+    background-color: #e40066;
+    font: #c4cbca;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+nav:hover {
+    background-color: #03cea4;
+    transform: rotate(180deg);
+}
+
+#logo {
+    display: block;
+}
+
+#link-1:hover {
+    background-color: yellowgreen;
+    transform: rotate(97deg);
+}
+
+#link-2:hover {
+    background-color: teal;
+    transform: rotate(-93deg);
+}
+
+#link-3:hover {
+    background-color: purple;
+    transform: rotate(260deg);
+}
+
+#link-4:hover {
+    background-color: brown;
+    transform: rotate(290deg);
+}
+
+#EA {
+    position: relative;
+    animation: move 2s infinite;
+}
+
+@keyframes move {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-600px);}
+    100% {transform: translateX(0);}
+}
+
+header:hover {
+    background-color: green;
+}
+
+.top-half:hover p {
+    background-color: #ffaaea;
+    animation: 
+        spin 1s linear infinite, 
+        shrink 1s ease forwards;
+}
+
+.scared {
+    grid-row: 5/9;
+    grid-column: 1/8;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.top-half:hover .scared {
+    animation: fadein 1s ease 1s forwards;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes spin {
+    from {rotate: 0deg;}
+    to {rotate:360deg;}
+}
+
+@keyframes shrink {
+    from {scale: 1;}
+    to {scale: 0;}
+}
+
+.top-half {
+    background-color: #eac435;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, .15fr) 1fr;
+    grid-template-rows: repeat(15, 32px);
+    max-height: 500px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+    justify-items: center;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+h1 {
+    grid-row: 2/4;
+    grid-column: 1/8;
+}
+
+p {
+    grid-row: 5/9;
+    grid-column: 1/8;
+}
+
+#button-1 {
+    max-width: 150px;
+    max-height: 50px;
+    justify-self: center;
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 12/13;
+}
+
+#button-2 {
+    max-width: 150px;
+    max-height: 50px;
+    justify-self: center;
+    align-self: center;
+    grid-column: 3/4;
+    grid-row: 12/13;
+}
+
+.top-half:hover{
+    background-color: lightcoral;
+}
+
+/* throw a nice flashbang here somewhere. Button that makes everything white?*/
+
+.bottom-half {
+    background-color: aqua;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr repeat(7, .15fr);
+    grid-template-rows: repeat(15, 32px);
+    max-height: 500px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.bottom-half:hover {
+    background-color: #ff7f11;
+}
+
+/* oooooo make a strobe button. Yes yes*/
+
+h1:hover {
+    font-size: larger;
+}
+
+button:hover {
+    animation: grow 60s cubic-bezier(0.1,0,0.9,1) forwards;
+}
+
+.photo-test{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    max-width: 400px;
+    grid-column: 8/9;
+    grid-row: 2/span10;
+    align-self: start;
+}
+
+#photo {
+    opacity: 0;
+    transition: opacity 3s ease;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    min-width: 0;
+    min-height: 0;
+}
+
+.photo-test-2 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    max-width: 400px;
+    grid-column: 1/2;
+    grid-row: 2/span10;
+    align-self: start;
+}
+
+#photo-2 {
+    opacity: 0;
+    transition: opacity 20s ease;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    min-width: 0;
+    min-height: 0;
+}
+
+.bait {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: opacity .25s ease;
+}
+
+#photo:hover{
+    opacity: 1;
+}
+
+#photo-2:hover{
+    opacity: 1;
+}
+
+.bait:hover {
+    opacity: 0;
+}
+/* MADDESS */
+
+@keyframes grow {
+    from {transform: scale(1);}
+    to {transform: scale(50);}
+}
+
+.items {
+    display: grid;
+    grid-column: 2/9;
+    grid-row: 2/span10;
+    grid-auto-rows: 32px;
+    margin: 0;
+    padding-left: 1.5rem;
+    align-items: center;
+}
+
+#item1:hover {
+    background-color: #f25757;
+    animation: grow 60s cubic-bezier(0.1,0,0.9,1) forwards;
+}
+
+#item2:hover {
+    background-color: #ff8c42;
+    transform: rotate(180deg);
+}
+
+#item3:hover {
+    background-color: #eac435;
+    opacity: 0;
+}
+
+#item4:hover {
+    background-color: #606c38;
+    font-size: 200px;
+}
+
+#item5:hover span {
+    display: inline-block;
+    background-color: #6c8ead;
+    animation: bye 2s ease forwards;
+}
+
+@keyframes bye {
+    from {transform: translateX(0);}
+    to {transform: translateX(100vw);}
+}
+
+#item6:hover ~ .flashbang {
+    opacity: 1;
+}
+
+.flashbang {
+    position: fixed;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+#item7:hover {
+    background-color: #9b287b;
+    font-size: 0;
+}
+
+#item7:hover::after {
+    content: "surprise!";
+    font-size: 1rem;
+}
+/*organize this crap you idiot*/

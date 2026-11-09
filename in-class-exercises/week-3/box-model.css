@@ -1,0 +1,50 @@
+/* CSS Syntax*/
+
+
+
+/* element selector is like h1, names*/
+h1 {
+    color: blue;
+    margin: 0;
+    text-align: 0;
+    margin-bottom: 200px;
+}
+
+/*ID selectors are the best, most custom*/
+
+#other-paragraph {
+    color: green;
+    margin: 0;
+    text-align: 0;
+    margin-bottom: 200px;
+}
+
+/* Class selectors are ways to specify groups*/
+
+.paragraphs {
+    color: red
+}
+
+/*You can combine these to get an inbetween specificity*/
+p.paragraphs {
+    color:pink
+}
+/*paragraph margin adjustments*/
+p {
+    margin: 0;
+    border-width: 150px;
+    border-style: solid;
+    border-color: gold; 
+    padding: 25px
+}
+
+/* Descendancy select. A paragraph inside of the div*/
+div p {
+    font-size: 40px
+}
+
+/*Span by default is an inline element*/
+
+div p span {
+    font-weight: bolder;
+}
